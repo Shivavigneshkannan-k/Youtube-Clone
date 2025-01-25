@@ -4,6 +4,7 @@ import MainContainer from "./MainContainer";
 import VideoContainer from "./VideoContainer";
 import Video from "./Video";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Shimmer from "./Shimmer";
 
 const Body = () => {
   const routes = createBrowserRouter([
@@ -12,12 +13,13 @@ const Body = () => {
       element: <MainContainer />,
       children: [
         { path: "/", element: <VideoContainer /> },
-        { path: "/watch",element: <Video />},
+        { path: "/watch", element: <Video /> }
       ]
-    }
+    },
+    { path: "/shimmer", element: <Shimmer /> }
   ]);
   return (
-    <div>
+    <div className="bg-black h-screen">
       <Header />
       <RouterProvider router={routes} />
     </div>

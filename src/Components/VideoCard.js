@@ -1,4 +1,7 @@
+import { useSelector } from "react-redux";
+
 const VideoCard = ({ info }) => {
+  const isOpen = useSelector((store) => store.feature.sideBarOpen);
   if (!info) return;
   const { snippet, statistics } = info;
   const diff = new Date() - new Date(snippet?.publishedAt);
@@ -8,8 +11,9 @@ const VideoCard = ({ info }) => {
     time = Math.floor(diff / (60 * 60 * 1000));
     since = "hours";
   }
+  
   return (
-    <div className="grid-rows-2 my-4 rounded-xl m-2 items-center cursor-pointer">
+    <div className={`grid-rows-2 my-4 rounded-xl m-2 items-center cursor-pointer`}>
       <img
         alt="video thumbnail"
         src={snippet?.thumbnails?.medium?.url}

@@ -19,9 +19,10 @@ const usePopularVideos = (videoData, setVideoData) => {
           err.message
         );
       }
+      return ()=> fetchPopularVideos();
     };
     videoData && fetchPopularVideos();
-  }, [videoData]);
+  }, []);
 };
 
 export default usePopularVideos;
