@@ -40,14 +40,14 @@ const Search = () => {
   return (
     // <div></div>
     <form
-      className="justify-center items-center flex flex-1 relative col-span-10 bg-black text-white"
+      className="justify-center items-center flex flex-1 relative col-span-10 dark:bg-black text-white"
       onSubmit={(e) => {
         e.preventDefault();
       }}>
       <input
         type="text"
         placeholder="Search"
-        className="w-1/2 px-4 py-1 text-md  outline-none focus:outline-blue-700 rounded-l-full bg-black text-white"
+        className="w-1/2 px-4 py-1 text-md  outline-none focus:outline-blue-700 rounded-l-full dark:bg-black text-white"
         value={inputText}
         onChange={(e) => setInputText(e.target.value)}
         onFocus={() => setShowSuggestions(true)}
@@ -55,7 +55,7 @@ const Search = () => {
         onScroll={() => setShowSuggestions(false)}
       />
       {showSuggestion && suggestions.length !== 0 && (
-        <div className="w-[40%] bg-gray-100 absolute top-full px-2 py-1 shadow-lg left-1/4 rounded-lg">
+        <div className="w-[40%] absolute top-full px-2 py-1 shadow-lg left-1/4 rounded-lg bg-black">
           {suggestions.map((suggest) => (
             <Suggestion key={suggest} name={suggest} />
           ))}

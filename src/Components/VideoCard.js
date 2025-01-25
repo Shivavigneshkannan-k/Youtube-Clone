@@ -20,11 +20,11 @@ const VideoCard = ({ info }) => {
         className="rounded-2xl w-full object-contain "
       />
       <div className="pt-2">
-        <p className="font-bold text-md">{snippet?.title}</p>
-        <p>{snippet?.channelTitle}</p>
+        <p className="font-semibold mb-1">{snippet?.title}</p>
+        <p className="text-sm">{snippet?.channelTitle}</p>
         <div className="flex gap-1">
-          <p>{Math.floor(statistics?.viewCount / 10000)}K views</p> -
-          <p>{time + " " + since} ago</p>
+          <p className="text-sm" >{Math.floor(statistics?.viewCount / 10000)}K views</p> 
+          <p className="text-sm">- {time + " " + since} ago</p>
         </div>
       </div>
     </div>

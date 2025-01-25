@@ -7,7 +7,7 @@ const Header = () => {
   const dispatch = useDispatch();
 
   return (
-    <div className="w-full grid grid-flow-col h-16 items-center shadow-md fixed bg-black text-white b">
+    <div className="w-full grid grid-flow-col h-16 items-center shadow-md fixed dark:bg-black text-white b">
       <div className="flex justify-startitems-center">
         <div className="p-3 w-16 ml-4 items-center flex">
           <img
@@ -19,7 +19,7 @@ const Header = () => {
             }}
           />
         </div>
-        <div className="w-36 justify-center items-center flex">
+        <div className="w-32 justify-center items-center flex">
           <img alt="logo" src={YOUTUBE_LOGO} className="cursor-pointer" />
         </div>
       </div>

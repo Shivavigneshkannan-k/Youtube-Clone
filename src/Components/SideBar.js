@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import SideBarButton from "./SideBarButton";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
@@ -31,6 +30,10 @@ const SideBar = () => {
         <ul className="px-2 text-md font-semibold">
           <li className="py-1">Channel 1</li>
           <li className="py-1">Channel 2</li>
+          <li className="py-1">Channel 3</li>
+          <li className="py-1">Channel 4</li>
+          <li className="py-1">Channel 5</li>
+          <li className="py-1">Channel 6</li>
         </ul>
       </div>
     </div>

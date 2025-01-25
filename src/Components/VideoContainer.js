@@ -13,7 +13,7 @@ const VideoContainer = () => {
   if (videoData.length===0) return <Shimmer />;
   
   return (
-    <div className={`col-span-12 py-10 px-5 grid grid-cols-4 pt-20 bg-black text-white ${isOpen?"pl-44":"pl-5"}`}>
+    <div className={`col-span-12 py-10 px-5 grid grid-cols-4 pt-20 dark:bg-black text-white ${isOpen?"pl-44":"pl-5"}`}>
       {videoData.map((video) => (
         <Link to={"/watch?v=" + video.id} key={video.id}>
           <VideoCard info={video} />
